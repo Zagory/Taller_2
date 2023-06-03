@@ -1,0 +1,12 @@
+main_el_volumen_de_un_cono
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+  float radio = 14.5; // asigna el valor del radio el cual quieres
+  float altura = 26.79; // asigna el valor de la altura  el cual quieres xd
+  float volumen;
+  volumen = (M_PI * pow(radio, 2) * altura) / 3;
+  printf("El volumen del cono es: %.2f\n", volumen);
+  return 0;
+}
