@@ -50,12 +50,15 @@ main_calcula_la_nota_final
 
 #include <stdio.h>
 
-int main() {
-  float examen1, examen2, practica1, practica2, practica3, actividad, nota;
+int main()
+{
+  float examen1, examen2, examen3, practica1, practica2, practica3, actividad, nota;
   printf("Ingrese la calificación del primer examen: ");
   scanf("%f", &examen1);
   printf("Ingrese la calificación del segundo examen: ");
   scanf("%f", &examen2);
+  printf("Ingrese la calificación del tercer examen: ");
+  scanf("%f", &examen3);
   printf("Ingrese la calificación de la primera práctica: ");
   scanf("%f", &practica1);
   printf("Ingrese la calificación de la segunda práctica: ");
@@ -64,9 +67,8 @@ int main() {
   scanf("%f", &practica3);
   printf("Ingrese la calificación de la actividad adicional: ");
   scanf("%f", &actividad);
-  // Calcula la nota final usando los porcentajes dados
-  nota = (examen1 * 0.15) + (examen2 * 0.25) + (practica1 * 0.15) + (practica2 * 0.15) + (practica3 * 0.15) + (actividad * 0.15);
-  printf("La nota final de la asignatura es: %.2f\n", nota);
+  nota = (examen1 + examen2 + examen3 + practica1 + practica2 + practica3 + actividad) / 7;
+  printf("La nota final es: %.2f\n", nota);
   return 0;
 }
 
