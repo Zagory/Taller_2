@@ -222,24 +222,29 @@ main_préstamo_hipotecario
 #include <math.h>
 
 int main() {
-  float capital, interes, anos;
-  float ratio, plazo, cuota, total, amortizacion, intereses;
-  printf("Ingrese el capital prestado: ");
-  scanf("%f", &capital);
-  printf("Ingrese el interés anual: ");
-  scanf("%f", &interes);
-  printf("Ingrese los años que dura el préstamo: ");
-  scanf("%f", &anos);
-  ratio = interes / 12;
-  plazo = anos * 12;
-  cuota = capital * ratio / 100 * pow(1 + ratio / 100, plazo) / (pow(1 + ratio / 100, plazo) - 1);
-  total = cuota * plazo;
-  amortizacion = capital;
-  intereses = total - amortizacion;
-  printf("La cuota mensual es: %.2f $\n", cuota);
-  printf("El total pagado es: %.2f $\n", total);
-  printf("La cantidad de amortización es: %.2f $\n", amortizacion);
-  printf("La cantidad de intereses es: %.2f $\n", intereses);
-  
-  return 0;
+    double capital_prestado, interes_anual, interes_mensual, cuota_mensual, total_pagado, capital_amortizado;
+    int plazo_anos, plazo_meses;
+    
+    printf("Introduce el capital prestado: ");
+    scanf("%lf", &capital_prestado);
+    
+    printf("Introduce el interés anual (en porcentaje): ");
+    scanf("%lf", &interes_anual);
+    
+    printf("Introduce el plazo del préstamo (en años): ");
+    scanf("%d", &plazo_anos);
+    
+    interes_mensual = interes_anual / 1200.0;
+    plazo_meses = plazo_anos * 12;
+    
+    cuota_mensual = capital_prestado * interes_mensual / 100 * (1 - pow(1 + interes_mensual / 100, -plazo_meses));
+    total_pagado = cuota_mensual * plazo_meses;
+    capital_amortizado = capital_prestado;
+    
+    printf("Cuota mensual: %.2f\n", cuota_mensual);
+    printf("Total pagado: %.2f\n", total_pagado);
+    printf("Capital amortizado: %.2f\n", capital_amortizado);
+    printf("Intereses pagados: %.2f\n", total_pagado - capital_amortizado);
+    
+    return 0;
 }
