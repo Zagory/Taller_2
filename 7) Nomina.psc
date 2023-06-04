@@ -15,7 +15,7 @@ Algoritmo Nomina
 	Leer sueldo_base;
 	Escribir "Complemento de destino: ";
 	Leer complemento_destino;
-	Escribir "Complemento de cargo académico: ";
+	Escribir "Complemento de cargo acadÃ©mico: ";
 	Leer complemento_cargo;
 	Escribir "Horas extra realizadas: ";
 	Leer horas_extra;
@@ -27,14 +27,14 @@ Algoritmo Nomina
 	sueldo_bruto <- sueldo_base + complemento_destino + complemento_cargo + horas_extra*23;
 	// Calcular el porcentaje de IRPF
 	porcentaje_irpf <- 0.24 - hijos*0.02 - mayores*0.01;
-	// Calcular la retención por IRPF
+	// Calcular la retenciÃ³n por IRPF
 	retencion_irpf <- sueldo_bruto * porcentaje_irpf;
 	// Calcular el sueldo neto
 	sueldo_neto <- sueldo_bruto - retencion_irpf;
 	// Mostrar los resultados
-	Escribir "Cálculo de la nómina.";
+	Escribir "CÃ¡lculo de la nÃ³mina.";
 	Escribir "Sueldo bruto: ", sueldo_bruto, " $";
 	Escribir "Porcentaje de IRPF: ", porcentaje_irpf*100, "%";
-	Escribir "Retención por IRPF: ", retencion_irpf, " $";
+	Escribir "RetenciÃ³n por IRPF: ", retencion_irpf, " $";
 	Escribir "Sueldo neto: ", sueldo_neto, " $";
 FinAlgoritmo
