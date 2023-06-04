@@ -4,9 +4,9 @@ Proceso Prestamo_Hipotecario
     Definir ratio Como Real;
     Escribir "Introduce el capital prestado: ";
     Leer capital;
-    Escribir "Introduce el interés anual: ";
+    Escribir "Introduce el interÃ©s anual: ";
     Leer interes_anual;
-    Escribir "Introduce los años que dura el préstamo: ";
+    Escribir "Introduce los aÃ±os que dura el prÃ©stamo: ";
     Leer anos;
     ratio <- interes_anual / 12;
     plazo <- anos * 12;
@@ -16,6 +16,6 @@ Proceso Prestamo_Hipotecario
     intereses <- total_pagado - amortizacion;
     Escribir "La cuota mensual es: ", cuota;
     Escribir "El total pagado es: ", total_pagado;
-    Escribir "La cantidad de amortización es: ", amortizacion;
+    Escribir "La cantidad de amortizaciÃ³n es: ", amortizacion;
     Escribir "La cantidad de intereses es: ", intereses;
 FinProceso
